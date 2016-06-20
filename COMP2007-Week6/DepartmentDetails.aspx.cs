@@ -26,7 +26,7 @@ namespace COMP2007_Week6
             int DepartmentID = Convert.ToInt32(Request.QueryString["DepartmentID"]);
 
             //Connect to EF framework
-            using (DefaultConnection db = new DefaultConnection())
+            using (ContosoConnection db = new ContosoConnection())
             {
                 //Populate student object instance with Student ID from URL parameter
                 Department updatedDepartment = (from department in db.Departments
@@ -50,7 +50,7 @@ namespace COMP2007_Week6
         protected void SaveButton_Click(object sender, EventArgs e)
         {
             // connect to EF DB
-            using (DefaultConnection db = new DefaultConnection())
+            using (ContosoConnection db = new ContosoConnection())
             {
                 // use the student model to save a new record
                 Department newDepartment = new Department();

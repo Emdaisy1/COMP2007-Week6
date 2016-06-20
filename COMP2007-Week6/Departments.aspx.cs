@@ -27,7 +27,7 @@ namespace COMP2007_Week6
         protected void GetDepartments()
         {
             //Connect to DB
-            using (DefaultConnection db = new DefaultConnection())
+            using (ContosoConnection db = new ContosoConnection())
             {
                 string SortString = Session["SortColumn"].ToString() + " " + Session["SortDirection"].ToString();
                 var Departments = (from allDepartments in db.Departments
@@ -55,7 +55,7 @@ namespace COMP2007_Week6
 
             int DepartmentID = Convert.ToInt32(DepartmentsGridView.DataKeys[selectedRow].Values["DepartmentID"]);
 
-            using (DefaultConnection db = new DefaultConnection())
+            using (ContosoConnection db = new ContosoConnection())
             {
                 Department deletedDepartment = (from DepartmentRecords in db.Departments
                                                 where DepartmentRecords.DepartmentID == DepartmentID
