@@ -39,7 +39,7 @@ namespace COMP2007_Week6
                 authenticationManager.SignIn(new AuthenticationProperties() {IsPersistent = false }, userIdentity);
 
                 //Redirect to main menu
-                Response.Redirect("~/MainMenu.aspx");
+                Response.Redirect("~/Contoso/MainMenu.aspx");
             }
             else
             {
