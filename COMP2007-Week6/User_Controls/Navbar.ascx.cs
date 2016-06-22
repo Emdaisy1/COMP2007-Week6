@@ -27,11 +27,16 @@ namespace COMP2007_Week6
                 {
                     ContosoPlaceHolder.Visible = true;
                     PublicPlaceHolder.Visible = false;
+                    if(HttpContext.Current.User.Identity.GetUserName() == "Emma")
+                    {
+                        UserPlaceHolder.Visible = true;
+                    }
                 }
                 else
                 {
                     ContosoPlaceHolder.Visible = false;
                     PublicPlaceHolder.Visible = true;
+                    UserPlaceHolder.Visible = false;
                 }
                 SetActivePage();
             }
@@ -73,6 +78,9 @@ namespace COMP2007_Week6
                     break;
                 case "Register":
                     register.Attributes.Add("class", "active");
+                    break;
+                case "Users":
+                    users.Attributes.Add("class", "active");
                     break;
             }
         }

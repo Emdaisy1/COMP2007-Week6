@@ -19,7 +19,7 @@ namespace COMP2007_Week6
             app.UseCookieAuthentication(new CookieAuthenticationOptions
             {
                 AuthenticationType = DefaultAuthenticationTypes.ApplicationCookie,
-                LoginPath = new PathString("/Login")
+                LoginPath = new PathString("/Login.aspx")
             });
         }
     }

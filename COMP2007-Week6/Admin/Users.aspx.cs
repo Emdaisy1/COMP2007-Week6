@@ -37,6 +37,17 @@ namespace COMP2007_Week6.Admin
             int selectedRow = e.RowIndex;
 
             string UserID = UsersGridView.DataKeys[selectedRow].Values["Id"].ToString();
+
+            using (UserConnection db = new UserConnection())
+            {
+                AspNetUser deletedUser = (from users in db.AspNetUsers
+                                          where users.Id == UserID
+                                          select users).FirstOrDefault();
+                db.AspNetUsers.Remove(deletedUser);
+                db.SaveChanges();
+            }
+
+            this.GetUsers();
         }
     }
 }

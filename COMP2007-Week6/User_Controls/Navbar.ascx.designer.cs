@@ -49,6 +49,24 @@ namespace COMP2007_Week6 {
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl register;
         
         /// <summary>
+        /// UserPlaceHolder control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.PlaceHolder UserPlaceHolder;
+        
+        /// <summary>
+        /// users control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl users;
+        
+        /// <summary>
         /// ContosoPlaceHolder control.
         /// </summary>
         /// <remarks>
