@@ -173,6 +173,7 @@
     <Content Include="Models\UserModel.edmx.diagram">
       <DependentUpon>UserModel.edmx</DependentUpon>
     </Content>
+    <Content Include="ContosoClassDiagram.cd" />
     <None Include="Scripts\jquery-2.2.4.intellisense.js" />
     <Content Include="Register.aspx" />
     <Content Include="Scripts\bootstrap.js" />

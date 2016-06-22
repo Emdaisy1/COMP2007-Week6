@@ -63,7 +63,8 @@ namespace COMP2007_Week6.Admin
             string UserID = "";
             if(Request.QueryString.Count > 0)
             {
-                using(UserConnection db = new UserConnection())
+                UserID = Request.QueryString["Id"].ToString();
+                using (UserConnection db = new UserConnection())
                 {
                     AspNetUser newUser = new AspNetUser();
                     newUser = (from users in db.AspNetUsers
